@@ -1,0 +1,42 @@
+# ====================================================================
+# Docker Ignore Configuration - Root
+# ====================================================================
+
+# Version control & metadata
+.git/
+.gitignore
+.gitattributes
+README.md
+
+# Secrets & Environment configs
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+
+# Node dependencies & local builds
+**/node_modules/
+node_modules/
+**/dist/
+dist/
+**/build/
+build/
+
+# Local database data
+mysql_data/
+**/mysql_data/
+*.sqlite
+
+# Testing & Coverage
+coverage/
+**/coverage/
+.vitest/
+
+# OS & Editor temp files
+.DS_Store
+**/.DS_Store
+.idea/
+.vscode/
+*.log

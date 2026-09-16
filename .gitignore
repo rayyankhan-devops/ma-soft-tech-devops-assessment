@@ -1,0 +1,57 @@
+# ====================================================================
+# Git Ignore Configuration - Production & Security Hardened
+# ====================================================================
+
+# Dependencies
+**/node_modules/
+node_modules/
+.pnp
+.pnp.js
+
+# Build Artifacts
+**/dist/
+dist/
+**/build/
+build/
+
+# Environment Variables & Secrets (CRITICAL SECURITY)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.crt
+credentials.json
+id_rsa*
+
+# Database data directories (local volume mounts)
+mysql_data/
+**/mysql_data/
+*.sqlite
+*.sqlite3
+
+# Logs & Debugging
+logs/
+**/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test Coverage
+coverage/
+**/coverage/
+.nyc_output/
+.vitest/
+
+# OS & Editor Specific Files
+.DS_Store
+**/.DS_Store
+Thumbs.db
+**/.idea/
+**/.vscode/
+*.swp
+*.swo
+*~

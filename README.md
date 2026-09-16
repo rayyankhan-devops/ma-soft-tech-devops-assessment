@@ -12,7 +12,7 @@ Decoupled, production-grade DevOps engineering assessment project for **MA SOFT 
 
 ## 🏛️ System Architecture
 
-![System Architecture Diagram](requirements/assets/architecture.svg)
+![System Architecture Diagram](requirements/assets/architecture.png)
 
 ---
 

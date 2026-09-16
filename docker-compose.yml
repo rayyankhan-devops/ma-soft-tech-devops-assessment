@@ -1,7 +1,4 @@
 services:
-  # ------------------------------------------------------------------
-  # Database Service (MySQL 8.0)
-  # ------------------------------------------------------------------
   db:
     image: mysql:8.0
     container_name: ma-devops-mysql
@@ -12,7 +9,6 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      # Auto-initialization: executes 01_schema.sql and 02_seed.sql on first startup
       - ./db/init/mysql:/docker-entrypoint-initdb.d:ro
       - mysql_data:/var/lib/mysql
     healthcheck:
@@ -24,9 +20,6 @@ services:
     networks:
       - ma_devops_network
 
-  # ------------------------------------------------------------------
-  # Backend API Service (Node.js & Express)
-  # ------------------------------------------------------------------
   backend:
     build:
       context: ./backend
@@ -52,9 +45,6 @@ services:
     networks:
       - ma_devops_network
 
-  # ------------------------------------------------------------------
-  # Frontend Service (React Static SPA served via Nginx)
-  # ------------------------------------------------------------------
   frontend:
     build:
       context: ./frontend
@@ -62,23 +52,17 @@ services:
     container_name: ma-devops-frontend
     restart: unless-stopped
     ports:
-      - "3000:80"
+      - "3000:8080"
     depends_on:
       backend:
         condition: service_healthy
     networks:
       - ma_devops_network
 
-# --------------------------------------------------------------------
-# Persistent Storage Volumes
-# --------------------------------------------------------------------
 volumes:
   mysql_data:
     name: ma_devops_mysql_data
 
-# --------------------------------------------------------------------
-# Isolated Bridge Network
-# --------------------------------------------------------------------
 networks:
   ma_devops_network:
     name: ma_devops_network

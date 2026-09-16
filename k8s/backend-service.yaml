@@ -15,3 +15,21 @@ spec:
       name: http
   selector:
     app: ma-devops-backend
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  namespace: ma-devops
+  labels:
+    app: ma-devops-backend
+    tier: api
+    app.kubernetes.io/part-of: ma-devops-suite
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8080
+      targetPort: 8080
+      name: http
+  selector:
+    app: ma-devops-backend

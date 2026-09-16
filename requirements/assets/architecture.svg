@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 680" width="100%" height="100%" style="background:#0f172a; font-family:'Inter',system-ui,-apple-system,sans-serif;">
+  <defs>
+    <linearGradient id="gradHeader" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="gradFrontend" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="gradBackend" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <linearGradient id="gradDatabase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+    <linearGradient id="gradCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#f97316"/>
+    </marker>
+  </defs>
+
+  <!-- Title & Header -->
+  <text x="550" y="45" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="800" letter-spacing="1">MA SOFT TECH SOLUTIONS — SYSTEM ARCHITECTURE</text>
+  <text x="550" y="70" text-anchor="middle" fill="#94a3b8" font-size="13">Decoupled Production Architecture &bull; Non-Root Docker Containers &bull; MySQL Auto-Seeding</text>
+
+  <!-- Section 1: CI/CD & DevOps Lifecycle -->
+  <rect x="50" y="95" width="1000" height="95" rx="12" fill="url(#gradCard)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="70" y="122" fill="#38bdf8" font-size="11" font-weight="700" letter-spacing="1.5">DEVOPS &amp; CI/CD AUTOMATION PIPELINE (PART 1 &amp; 6)</text>
+
+  <!-- Pipeline Steps -->
+  <g transform="translate(70, 135)">
+    <!-- Developer -->
+    <rect x="0" y="0" width="85" height="38" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="42" y="24" text-anchor="middle" fill="#f1f5f9" font-size="11" font-weight="600">Developer</text>
+    <line x1="85" y1="19" x2="105" y2="19" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Git Push -->
+    <rect x="110" y="0" width="85" height="38" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="152" y="24" text-anchor="middle" fill="#f1f5f9" font-size="11" font-weight="600">GitHub</text>
+    <line x1="195" y1="19" x2="215" y2="19" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- CI/CD Actions -->
+    <rect x="220" y="0" width="95" height="38" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="267" y="24" text-anchor="middle" fill="#f1f5f9" font-size="11" font-weight="600">Actions CI</text>
+    <line x1="315" y1="19" x2="335" y2="19" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Lint & Tests -->
+    <rect x="340" y="0" width="105" height="38" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="392" y="24" text-anchor="middle" fill="#f1f5f9" font-size="11" font-weight="600">Lint &amp; Tests</text>
+    <line x1="445" y1="19" x2="465" y2="19" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Multi-stage Build -->
+    <rect x="470" y="0" width="105" height="38" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="522" y="24" text-anchor="middle" fill="#f1f5f9" font-size="11" font-weight="600">Docker Build</text>
+    <line x1="575" y1="19" x2="595" y2="19" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Registry -->
+    <rect x="600" y="0" width="105" height="38" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="652" y="24" text-anchor="middle" fill="#f1f5f9" font-size="11" font-weight="600">Registry</text>
+    <line x1="705" y1="19" x2="725" y2="19" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Deployment -->
+    <rect x="730" y="0" width="100" height="38" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="780" y="24" text-anchor="middle" fill="#f1f5f9" font-size="11" font-weight="600">Deploy (K8s)</text>
+    <line x1="830" y1="19" x2="850" y2="19" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Health Check -->
+    <rect x="855" y="0" width="105" height="38" rx="6" fill="#1e293b" stroke="#22c55e" stroke-width="1"/>
+    <text x="907" y="24" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="600">Monitoring</text>
+  </g>
+
+  <!-- Section 2: Runtime Docker Compose Network -->
+  <rect x="50" y="210" width="1000" height="440" rx="12" fill="url(#gradCard)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="70" y="238" fill="#38bdf8" font-size="11" font-weight="700" letter-spacing="1.5">RUNTIME MULTI-CONTAINER ARCHITECTURE (DOCKER COMPOSE &amp; KUBERNETES)</text>
+
+  <!-- External Client Box -->
+  <g transform="translate(80, 310)">
+    <rect x="0" y="0" width="120" height="150" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+    <circle cx="60" cy="40" r="18" fill="#38bdf8" opacity="0.2"/>
+    <text x="60" y="46" text-anchor="middle" fill="#38bdf8" font-size="20">🌐</text>
+    <text x="60" y="80" text-anchor="middle" fill="#f8fafc" font-size="13" font-weight="700">Client</text>
+    <text x="60" y="100" text-anchor="middle" fill="#94a3b8" font-size="11">Browser / cURL</text>
+    <rect x="15" y="115" width="90" height="22" rx="4" fill="#0f172a"/>
+    <text x="60" y="130" text-anchor="middle" fill="#38bdf8" font-size="10" font-family="monospace">Port 3000</text>
+  </g>
+
+  <!-- Arrow Client to Frontend -->
+  <path d="M 200 385 L 255 385" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="228" y="375" text-anchor="middle" fill="#94a3b8" font-size="10">HTTP</text>
+
+  <!-- Docker Network Boundary -->
+  <rect x="260" y="260" width="760" height="365" rx="10" fill="#0f172a" fill-opacity="0.6" stroke="#0284c7" stroke-dasharray="6 4" stroke-width="1.5"/>
+  <text x="280" y="283" fill="#38bdf8" font-size="11" font-weight="600">Docker Network: ma_devops_network (Bridge)</text>
+
+  <!-- Container 1: Frontend -->
+  <g transform="translate(290, 305)">
+    <rect x="0" y="0" width="200" height="295" rx="8" fill="#1e293b" stroke="#0284c7" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="200" height="36" rx="8" fill="url(#gradFrontend)"/>
+    <text x="100" y="23" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700">frontend (Nginx)</text>
+
+    <!-- Specs -->
+    <text x="15" y="62" fill="#cbd5e1" font-size="11" font-weight="600">Image: <tspan fill="#38bdf8">nginx-unprivileged</tspan></text>
+    <text x="15" y="82" fill="#cbd5e1" font-size="11" font-weight="600">User: <tspan fill="#4ade80">nginx (UID 101)</tspan></text>
+    <text x="15" y="102" fill="#cbd5e1" font-size="11" font-weight="600">Internal Port: <tspan fill="#f1f5f9">8080</tspan></text>
+    <text x="15" y="122" fill="#cbd5e1" font-size="11" font-weight="600">Host Port: <tspan fill="#f1f5f9">3000</tspan></text>
+
+    <!-- Components inside frontend -->
+    <rect x="12" y="140" width="176" height="50" rx="5" fill="#0f172a" stroke="#334155"/>
+    <text x="20" y="160" fill="#e2e8f0" font-size="11" font-weight="600">React 18 Static SPA</text>
+    <text x="20" y="178" fill="#94a3b8" font-size="10">Vite Build (/usr/share/nginx)</text>
+
+    <rect x="12" y="200" width="176" height="80" rx="5" fill="#0f172a" stroke="#334155"/>
+    <text x="20" y="220" fill="#e2e8f0" font-size="11" font-weight="600">Reverse Proxy Rules</text>
+    <text x="20" y="238" fill="#38bdf8" font-size="10" font-family="monospace">/api/  &rarr; backend:8080</text>
+    <text x="20" y="254" fill="#38bdf8" font-size="10" font-family="monospace">/health &rarr; backend:8080</text>
+    <text x="20" y="270" fill="#a855f7" font-size="10" font-family="monospace">Security Headers &amp; Gzip</text>
+  </g>
+
+  <!-- Arrow Frontend to Backend -->
+  <path d="M 490 440 L 545 440" stroke="#22c55e" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="518" y="430" text-anchor="middle" fill="#4ade80" font-size="10">Reverse</text>
+  <text x="518" y="455" text-anchor="middle" fill="#4ade80" font-size="10">Proxy</text>
+
+  <!-- Container 2: Backend -->
+  <g transform="translate(550, 305)">
+    <rect x="0" y="0" width="200" height="295" rx="8" fill="#1e293b" stroke="#16a34a" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="200" height="36" rx="8" fill="url(#gradBackend)"/>
+    <text x="100" y="23" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700">backend (Express)</text>
+
+    <!-- Specs -->
+    <text x="15" y="62" fill="#cbd5e1" font-size="11" font-weight="600">Image: <tspan fill="#38bdf8">node:22-alpine</tspan></text>
+    <text x="15" y="82" fill="#cbd5e1" font-size="11" font-weight="600">User: <tspan fill="#4ade80">node (UID 1000)</tspan></text>
+    <text x="15" y="102" fill="#cbd5e1" font-size="11" font-weight="600">Container Port: <tspan fill="#f1f5f9">8080</tspan></text>
+    <text x="15" y="122" fill="#cbd5e1" font-size="11" font-weight="600">Host Port: <tspan fill="#f1f5f9">8080</tspan></text>
+
+    <!-- Components inside backend -->
+    <rect x="12" y="140" width="176" height="65" rx="5" fill="#0f172a" stroke="#334155"/>
+    <text x="20" y="160" fill="#e2e8f0" font-size="11" font-weight="600">REST API &amp; Validation</text>
+    <text x="20" y="178" fill="#94a3b8" font-size="10">GET/POST /api/v1/items</text>
+    <text x="20" y="194" fill="#94a3b8" font-size="10">GET /health (Telemetry)</text>
+
+    <rect x="12" y="215" width="176" height="65" rx="5" fill="#0f172a" stroke="#334155"/>
+    <text x="20" y="235" fill="#e2e8f0" font-size="11" font-weight="600">Resilient DB Engine</text>
+    <text x="20" y="253" fill="#38bdf8" font-size="10">mysql2 Connection Pool</text>
+    <text x="20" y="269" fill="#eab308" font-size="10">Auto Offline Fallback</text>
+  </g>
+
+  <!-- Arrow Backend to Database -->
+  <path d="M 750 440 L 805 440" stroke="#f97316" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+  <text x="778" y="425" text-anchor="middle" fill="#fb923c" font-size="10">SQL</text>
+  <text x="778" y="455" text-anchor="middle" fill="#fb923c" font-size="10">Port 3306</text>
+
+  <!-- Container 3: Database -->
+  <g transform="translate(810, 305)">
+    <rect x="0" y="0" width="190" height="295" rx="8" fill="#1e293b" stroke="#ea580c" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="190" height="36" rx="8" fill="url(#gradDatabase)"/>
+    <text x="95" y="23" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700">db (MySQL 8.0)</text>
+
+    <!-- Specs -->
+    <text x="15" y="62" fill="#cbd5e1" font-size="11" font-weight="600">Image: <tspan fill="#38bdf8">mysql:8.0</tspan></text>
+    <text x="15" y="82" fill="#cbd5e1" font-size="11" font-weight="600">Database: <tspan fill="#f1f5f9">ma_devops_db</tspan></text>
+    <text x="15" y="102" fill="#cbd5e1" font-size="11" font-weight="600">Port: <tspan fill="#f1f5f9">3306</tspan></text>
+    <text x="15" y="122" fill="#cbd5e1" font-size="11" font-weight="600">Healthcheck: <tspan fill="#4ade80">mysqladmin</tspan></text>
+
+    <!-- Auto-seed volume mount -->
+    <rect x="12" y="140" width="166" height="65" rx="5" fill="#0f172a" stroke="#334155"/>
+    <text x="20" y="158" fill="#e2e8f0" font-size="10" font-weight="600">Auto-Seed Volume</text>
+    <text x="20" y="174" fill="#38bdf8" font-size="9" font-family="monospace">db/init/mysql/:ro</text>
+    <text x="20" y="190" fill="#94a3b8" font-size="9">&rarr; 01_schema.sql, 02_seed</text>
+
+    <!-- Persistent data volume -->
+    <rect x="12" y="215" width="166" height="65" rx="5" fill="#0f172a" stroke="#334155"/>
+    <text x="20" y="235" fill="#e2e8f0" font-size="10" font-weight="600">Persistent Storage</text>
+    <text x="20" y="253" fill="#fb923c" font-size="9" font-family="monospace">ma_devops_mysql_data</text>
+    <text x="20" y="269" fill="#94a3b8" font-size="9">&rarr; /var/lib/mysql</text>
+  </g>
+</svg>

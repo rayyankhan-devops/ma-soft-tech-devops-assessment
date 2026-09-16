@@ -10,6 +10,12 @@ Decoupled, production-grade DevOps engineering assessment project for **MA SOFT 
 
 ---
 
+## 🏛️ System Architecture
+
+![System Architecture Diagram](requirements/assets/architecture.svg)
+
+---
+
 ## 🗂️ Clean Directory Structure
 
 The project root consists strictly of the **4 core service directories**:

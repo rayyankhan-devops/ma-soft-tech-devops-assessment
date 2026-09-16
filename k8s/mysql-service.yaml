@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ma-devops-mysql-svc
+  namespace: ma-devops
+  labels:
+    app: ma-devops-mysql
+    tier: database
+    app.kubernetes.io/part-of: ma-devops-suite
+spec:
+  type: ClusterIP
+  ports:
+    - port: 3306
+      targetPort: 3306
+      name: mysql
+  selector:
+    app: ma-devops-mysql

@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ma-devops-frontend-svc
+  namespace: ma-devops
+  labels:
+    app: ma-devops-frontend
+    tier: frontend
+    app.kubernetes.io/part-of: ma-devops-suite
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 8080
+      nodePort: 30080
+      name: http
+  selector:
+    app: ma-devops-frontend

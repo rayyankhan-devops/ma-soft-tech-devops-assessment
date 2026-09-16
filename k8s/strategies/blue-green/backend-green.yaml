@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ma-devops-backend-green
+  namespace: ma-devops
+  labels:
+    app: ma-devops-backend
+    version: green
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ma-devops-backend
+      version: green
+  template:
+    metadata:
+      labels:
+        app: ma-devops-backend
+        version: green
+    spec:
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+        runAsNonRoot: true
+      containers:
+        - name: backend
+          image: rayyan12311/ma-devops-backend:v1.1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: ma-devops-config
+            - secretRef:
+                name: ma-devops-secrets
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 300m
+              memory: 256Mi
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 5
